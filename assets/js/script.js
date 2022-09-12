@@ -1,16 +1,20 @@
-var today = moment();
-var time = moment().format("hh:mm:ss");
+var today = moment().format('dddd, MMMM Do');
+$("#currentDay").text(today);
+
+var currentTime = moment().hour();
 var nineAm = $('.description');
 var before = moment().startOf('hour').fromNow();
 var after = moment().endOf('hour').fromNow();
-var test = moment("9:30").format("HH:mm");
+var hour = $('.hour');
 
-console.log(time);
+console.log(currentTime);
 console.log(before);
 console.log(after);
-console.log(test);
 
-$("#currentDay").text(today.format("dddd, MMMM Do"));
+// hour.forEach(element => {
+// var hourInt = parseInt($(hour).text());
+// console.log(hourInt);
+// });
 
 if (before) {
     console.log("grey");
