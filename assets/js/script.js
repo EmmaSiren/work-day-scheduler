@@ -4,6 +4,8 @@ $("#currentDay").text(today);
 var currentTime = moment().hour();
 console.log(currentTime);
 // console.log($('.description').attr('class').split(' ')[2]);
+var test = $('.description')
+
 
 $('.description').each(function() {
     var hourInt = parseInt($(this).attr("class").split(' ')[2]);
@@ -23,7 +25,7 @@ $('.description').each(function() {
 
 
 $('.saveBtn').click(function (){
-    var taskContent = $('.description').val();
+    var taskContent = $(this).siblings('.description').val();
     console.log(taskContent);
 
     // localStorage.setItem('task', taskContent);
